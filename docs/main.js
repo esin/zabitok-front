@@ -9,11 +9,10 @@ $(document).ready(function() {
         type: 'select',
         title: 'Выбор валюты для покупки',
         placement: 'right',
-        value: 2,
+        value: 1,
         source: [
             {value: 1, text: 'Яндекс.Деньги'},
-            {value: 2, text: 'status 2'},
-            {value: 3, text: 'status 3'}
+            {value: 2, text: 'QIWI'}
         ]
         /*
         //uncomment these lines to send data on server

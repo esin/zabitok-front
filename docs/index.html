@@ -1,35 +1,52 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>ZaBitok!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>  
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 
-    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.4.6/bootstrap-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.4.6/bootstrap-editable/css/bootstrap-editable.css" rel="stylesheet" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.4.6/bootstrap-editable/js/bootstrap-editable.min.js"></script>
-    
-    <script src="main.js"></script>
-  </head>
 
-  <body>
+    <script src="main.js"></script>
+    <script>
+        $(document).ready(function() {
+
+
+
+            $("button").click(function() {
+                $.get("demo_test.asp", function(data, status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+            });
+
+
+
+        });
+    </script>
+
+</head>
+
+<body>
 
     <div class="container">
 
-      <h1>Быстрый обмен биткоина на Яндекс.Деньги</h1>
+        <h1>Быстрый обмен биткоина</h1>
 
-      <div>
-        <span>Я отдам:</span>
-        <a href="#" id="btc-amount" data-type="text" data-placement="right" data-title="BTC"></a> <span>BTC</span>
-        <span>и получу</span>
-        <a href="#" id="val"></a>
-      </div>
+        <div>
+            <span>Я отдам </span>
+            <a href="#" id="btc-amount" data-type="text" data-placement="right" data-title="BTC">(сколько?)</a> <span>BTC</span>
+            <span>и получу</span>
+            <a href="#" id="val"></a> <span>в размере </span><span id="val-amount"></span>
+        </div>
 
-      
+
     </div>
 
-  </body>
+</body>
+
 </html>
